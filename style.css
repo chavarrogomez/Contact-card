@@ -38,7 +38,7 @@ body::before {
   }
 }
 .profile-card {
-  box-shadow: 0 18px -60px black;
+  box-shadow: 0 18px 200px -60px black;
   border-radius: 50px;
   width: 650px;
   position: relative;
@@ -62,6 +62,7 @@ body::before {
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
+  /*object-position: 65% 40%;*/
   display: block;
   box-shadow: 0 10px 60px -10px rgba(13, 28, 39, 0.5);
 }
@@ -150,4 +151,58 @@ body::before {
 .profile-card__social a.LinkedIn {
   background: linear-gradient(45deg, #0077b5, #0a66c2);
   box-shadow: 0 4px 30px rgba(43, 98, 169, 0.5);
+}
+.profile-card__actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+@media screen and (max-width: 576) {
+  .profile-card__actions {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+.profile-card__actions > button {
+  font-weight: bold;
+  font-size: 22px;
+  padding: 15px 0;
+  min-width: 250px;
+  border-radius: 50px;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+@media screen and (max-width: 768px) {
+  .profile-card__actions > button {
+    min-width: 170px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .profile-card__actions > button {
+    min-width: inherit;
+    width: 100%;
+    max-width: 350px;
+  }
+}
+@media screen and (min-width: 576px) {
+  .profile-card__actions > button:hover {
+    transform: translateY(-5px);
+  }
+}
+.profile-card__actions > button.blue {
+  background: linear-gradient(45deg, #1da1f2, #0e71c8);
+  box-shadow: 0 4px 30px rgba(19, 127, 212, 0.4);
+}
+.profile-card__actions > button.blue:hover {
+  box-shadow: 0 7px 30px rgba(19, 127, 212, 0.75);
+}
+.profile-card__actions > button.orange {
+  background: linear-gradient(45deg, #d5135a, #f05924);
+  box-shadow: 0 4px 30px rgba(223, 45, 70, 0.35);
+}
+.profile-card__actions > button.orange:hover {
+  box-shadow: 0 7px 30px rgba(223, 45, 70, 0.75);
 }/*# sourceMappingURL=style.css.map */
